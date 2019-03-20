@@ -1,0 +1,1 @@
+From: <?= $from ?> to: <?= $to ?> amount: <?= $amount ?> sum: <?= $sum ?> email: <?= $email ?>

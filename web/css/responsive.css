@@ -1,0 +1,66 @@
+.text-sm {
+    font-size: 1vw;
+}
+.text-md {
+    font-size: 2.4vh;
+    /*//font-weight: bolder;*/
+    padding: 0px;
+    margin-bottom: 20px;
+    /*-webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;*/
+
+}
+.text-xl {
+    font-size: 5.3vw;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black
+}
+.btn-outline-buy {
+    background-color: transparent;
+    border-color: #780000;
+    border-width: 2px;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+.btn-outline-buy:hover {
+    border-color: #780000;
+}
+.btn-outline-sell {
+    background-color: transparent;
+    border-color: #18631d;
+    border-width: 2px;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+.btn-outline-sell:hover {
+    border-color: #18631d;
+}
+.container-full {
+    margin-top: 60px;
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+.container-main {
+    margin-top: 1%;
+}
+
+.table-bordered {
+    border-width: 1px;
+    border-radius: 4px;
+}
+.table-condensed {
+    padding: 0.5px;
+}
+.middle {
+    text-align: right;
+}
+.first {
+    text-align: left;
+}
+.last {
+    text-align: left;
+}
+.text-info {
+    font-weight: bold;
+}

@@ -1,0 +1,454 @@
+2019-03-16 10:19:58 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:660
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(660): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#16 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:597
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+
+2019-03-16 10:19:58 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][info][application] $_COOKIE = [
+    'Phpstorm-758cddc7' => 'dbc81eef-1644-4857-950d-2854ed4c9f56'
+    'XSRF-TOKEN' => 'eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9'
+    'laravel_session' => 'eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ=='
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/cryptoexchange/'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'Phpstorm-758cddc7=dbc81eef-1644-4857-950d-2854ed4c9f56; XSRF-TOKEN=eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9; laravel_session=eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ%3D%3D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\PHP;C:\\Program Files (x86)\\composer;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Win64) PHP/7.1.27 OpenSSL/1.1.1b'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'SERVER_ADMIN' => 'root@webdevs.top'
+    'SCRIPT_FILENAME' => 'C:/Users/Jeka/WebProjects/cryptoexchange/web/index.php'
+    'REMOTE_PORT' => '51589'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/cryptoexchange/web/'
+    'SCRIPT_NAME' => '/cryptoexchange/web/index.php'
+    'PHP_SELF' => '/cryptoexchange/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1552731598.789
+    'REQUEST_TIME' => 1552731598
+]
+2019-03-16 10:19:59 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:660
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(660): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#16 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:597
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+
+2019-03-16 10:19:59 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][info][application] $_COOKIE = [
+    'Phpstorm-758cddc7' => 'dbc81eef-1644-4857-950d-2854ed4c9f56'
+    'XSRF-TOKEN' => 'eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9'
+    'laravel_session' => 'eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ=='
+    'PHPSESSID' => 'v3oqcenrtbhe7p3k5grtrjvmeb'
+    '_csrf' => '722aa2eab8492b9262da72e05536498771801a84617f16f3fbb4086badd45fb6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"IxnV7ggcLnSMsJ4NM03RMrc7TU54GXCY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/cryptoexchange/'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'Phpstorm-758cddc7=dbc81eef-1644-4857-950d-2854ed4c9f56; XSRF-TOKEN=eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9; laravel_session=eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ%3D%3D; PHPSESSID=v3oqcenrtbhe7p3k5grtrjvmeb; _csrf=722aa2eab8492b9262da72e05536498771801a84617f16f3fbb4086badd45fb6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22IxnV7ggcLnSMsJ4NM03RMrc7TU54GXCY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\PHP;C:\\Program Files (x86)\\composer;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Win64) PHP/7.1.27 OpenSSL/1.1.1b'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'SERVER_ADMIN' => 'root@webdevs.top'
+    'SCRIPT_FILENAME' => 'C:/Users/Jeka/WebProjects/cryptoexchange/web/index.php'
+    'REMOTE_PORT' => '51593'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/cryptoexchange/web/'
+    'SCRIPT_NAME' => '/cryptoexchange/web/index.php'
+    'PHP_SELF' => '/cryptoexchange/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1552731599.704
+    'REQUEST_TIME' => 1552731599
+]
+2019-03-16 10:20:52 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:660
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(660): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#16 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:597
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+
+2019-03-16 10:20:52 [::1][-][v3oqcenrtbhe7p3k5grtrjvmeb][info][application] $_COOKIE = [
+    'Phpstorm-758cddc7' => 'dbc81eef-1644-4857-950d-2854ed4c9f56'
+    'XSRF-TOKEN' => 'eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9'
+    'laravel_session' => 'eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ=='
+    'PHPSESSID' => 'v3oqcenrtbhe7p3k5grtrjvmeb'
+    '_csrf' => '722aa2eab8492b9262da72e05536498771801a84617f16f3fbb4086badd45fb6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"IxnV7ggcLnSMsJ4NM03RMrc7TU54GXCY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/cryptoexchange/'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'Phpstorm-758cddc7=dbc81eef-1644-4857-950d-2854ed4c9f56; XSRF-TOKEN=eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9; laravel_session=eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ%3D%3D; PHPSESSID=v3oqcenrtbhe7p3k5grtrjvmeb; _csrf=722aa2eab8492b9262da72e05536498771801a84617f16f3fbb4086badd45fb6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22IxnV7ggcLnSMsJ4NM03RMrc7TU54GXCY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\PHP;C:\\Program Files (x86)\\composer;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Win64) PHP/7.1.27 OpenSSL/1.1.1b'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'SERVER_ADMIN' => 'root@webdevs.top'
+    'SCRIPT_FILENAME' => 'C:/Users/Jeka/WebProjects/cryptoexchange/web/index.php'
+    'REMOTE_PORT' => '51598'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/cryptoexchange/web/'
+    'SCRIPT_NAME' => '/cryptoexchange/web/index.php'
+    'PHP_SELF' => '/cryptoexchange/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1552731652.502
+    'REQUEST_TIME' => 1552731652
+]
+2019-03-16 10:55:33 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:660
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(660): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#16 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:597
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+
+2019-03-16 10:55:33 [::1][-][-][info][application] $_COOKIE = [
+    'Phpstorm-758cddc7' => 'dbc81eef-1644-4857-950d-2854ed4c9f56'
+    'XSRF-TOKEN' => 'eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9'
+    'laravel_session' => 'eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ=='
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/cryptoexchange/'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'Phpstorm-758cddc7=dbc81eef-1644-4857-950d-2854ed4c9f56; XSRF-TOKEN=eyJpdiI6IkN2YnJha3llYXhtdU53RHN6U0pGdUE9PSIsInZhbHVlIjoiXC8wMHlLTUQxckdqc0FUMlhTeW9vVk94Nlg3SEFNXC9tZXJlTXVyVnh6RlNUd3UxK2kyWjFxN1N1ZFN2WGZzVGNDIiwibWFjIjoiNTA5MjdhMGQzOWY5Y2I5NjAyZmUxYjUwNTgxNjZiMmQ0ODQzYjVlNTdmZTE4YWUzZDEzNTdiNTE3MzZkZjc0ZSJ9; laravel_session=eyJpdiI6Im8wSlNPbEMrcm5MaURhN1BaM2Zod3c9PSIsInZhbHVlIjoiRWtwSkcwRkw5eEhEZ29QUkZiZjZIaHoxRVE5WU9ucTlBZHpvQzI5RlpUQmpqUVJMWk4wajJSWW01YzNJTndGTSIsIm1hYyI6ImM2NjU4MDdjMWQyOTM1ZDZkYzZkYTY3NjM5MTM0Zjc3NWQwZjkzNTY2NDhhOTcyMWZiMmZmYTQ5MDk3ZjhlZGEifQ%3D%3D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\PHP;C:\\Program Files (x86)\\composer;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Win64) PHP/7.1.27 OpenSSL/1.1.1b'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'SERVER_ADMIN' => 'root@webdevs.top'
+    'SCRIPT_FILENAME' => 'C:/Users/Jeka/WebProjects/cryptoexchange/web/index.php'
+    'REMOTE_PORT' => '51989'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/cryptoexchange/web/'
+    'SCRIPT_NAME' => '/cryptoexchange/web/index.php'
+    'PHP_SELF' => '/cryptoexchange/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1552733733.276
+    'REQUEST_TIME' => 1552733733
+]
+2019-03-17 23:26:29 [134.249.102.162][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:660
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(660): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#11 [internal function]: app\controllers\SiteController->actionIndex()
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#16 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#18 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php:597
+Stack trace:
+#0 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(943): yii\db\Connection->open()
+#1 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(243): yii\db\Connection->getSlavePdo()
+#3 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(1062): yii\db\Command->prepare(true)
+#4 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\Query.php(217): yii\db\Command->queryAll()
+#6 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\Users\Jeka\WebProjects\cryptoexchange\models\Currency.php(34): yii\db\ActiveQuery->all()
+#8 C:\Users\Jeka\WebProjects\cryptoexchange\controllers\SiteController.php(77): app\models\Currency::get()
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#13 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#14 C:\Users\Jeka\WebProjects\cryptoexchange\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\Users\Jeka\WebProjects\cryptoexchange\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+
+2019-03-17 23:26:29 [134.249.102.162][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 134.249.102.162
+2019-03-17 23:26:29 [134.249.102.162][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 134.249.102.162
+2019-03-17 23:26:28 [134.249.102.162][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => '134.249.102.162'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://134.249.102.162/cryptoexchange/'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\PHP;C:\\Program Files (x86)\\composer;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.38 (Win64) PHP/7.1.27 OpenSSL/1.1.1b'
+    'SERVER_NAME' => '134.249.102.162'
+    'SERVER_ADDR' => '192.168.1.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '134.249.102.162'
+    'DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/Jeka/WebProjects'
+    'SERVER_ADMIN' => 'root@webdevs.top'
+    'SCRIPT_FILENAME' => 'C:/Users/Jeka/WebProjects/cryptoexchange/web/index.php'
+    'REMOTE_PORT' => '60918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/cryptoexchange/web/'
+    'SCRIPT_NAME' => '/cryptoexchange/web/index.php'
+    'PHP_SELF' => '/cryptoexchange/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1552865188.869
+    'REQUEST_TIME' => 1552865188
+]
