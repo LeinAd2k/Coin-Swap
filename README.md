@@ -143,6 +143,8 @@ To execute acceptance tests do the following:
 
 4. Download [Selenium Server](http://www.seleniumhq.org/download/) and launch it:
 
+    (port 4444 or you need to change the files)
+
     ```
     java -jar ~/selenium-server-standalone-x.xx.x.jar
     ```
